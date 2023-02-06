@@ -1,0 +1,208 @@
+.product-inner-box .icons {
+    right: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    top: 3%;
+    transition: all 0.2s ease-in-out, transform 0.2s ease-in-out,
+        opacity 0.2s ease-in-out;
+    opacity: 0;
+}
+
+.product-inner-box .icons a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.product-inner-box .onsale .badge {
+    background: #000;
+    font-size: 12px;
+    padding: 5px 14px;
+    top: 0px;
+    position: absolute;
+}
+.product-inner-box .onsale .badge:before {
+    border-width: 10px 0px 0px 10px;
+    border-color: transparent transparent transparent #000;
+    content: "";
+    position: absolute;
+    right: -8px;
+    width: 0;
+    bottom: 0;
+    border-style: solid;
+}
+.product-inner-box .onsale .badge:after {
+    border-width: 10px 8px 0px 10px;
+    border-color: #000 transparent transparent;
+    content: "";
+    position: absolute;
+    right: -8px;
+    width: 0;
+    top: 0;
+    border-style: solid;
+}
+.product-inner-box img {
+    box-shadow: 0 33px 61px -29px rgb(0 0 0/26%);
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+}
+.product-box.is-hover .icons {
+    transform: rotateY(-3%);
+    top: 3%;
+    opacity: 1;
+}
+.card-btn {
+    display: flex;
+    justify-content: center;
+}
+.card-btn button {
+    position: absolute;
+    background-color: #fff;
+    bottom: 20px;
+    text-align: center;
+
+    opacity: 0;
+    transition: all 0.2s ease-in-out, transform 0.2s ease-in-out,
+        opacity 0.2s ease-in-out;
+}
+
+.product-box.is-hover .card-btn button {
+    opacity: 1;
+}
+.card-btn button:hover {
+    background: #000;
+    color: wheat;
+}
+.flag-icon-background,
+.flag-icon {
+    background-size: contain;
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
+
+.navbar .nav-item .nav-link.active::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 100%;
+    background-color: antiquewhite;
+    height: 2px;
+    animation: appear 0.4s linear;
+}
+.navbar {
+    background-color: black;
+}
+.navbar .nav-item .nav-link {
+    position: relative;
+}
+@keyframes appear {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+.product-name h3 {
+    font-size: 1.7vw;
+    text-align: center;
+}
+
+.btn-custom {
+    background-color: transparent;
+    border-color: #34495e;
+    color: white;
+    transition: ease-out 0.7s;
+    box-shadow: inset 0 0 0 0 #609587;
+}
+.btn-custom:hover {
+    box-shadow: inset 200px 0 0 0 #609587;
+    color: blanchedalmond !important;
+    border-color: blanchedalmond;
+}
+.btn-search {
+    background-color: black !important;
+
+    color: blanchedalmond !important;
+    transition: ease-out 0.7s;
+    box-shadow: inset 0 0 0 0 blanchedalmond;
+}
+.btn-search:hover {
+    box-shadow: inset 200px 0 0 0 blanchedalmond;
+    color: #34495e !important;
+    border-color: blanchedalmond;
+}
+.btn-cart {
+    background-color: var(--background-color);
+    color: #222;
+    font-weight: 550;
+    padding: 0.5em 1em;
+    border: 1px solid black;
+    outline: none;
+    position: relative;
+    cursor: pointer;
+
+    --background-color: #609587 !important;
+    --border-size: 2px !important;
+    --accent-color: #609587 !important;
+}
+.btn-cart:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: var(--border-size);
+    background-color: var(--accent-color);
+    transition: transform 300ms ease-in-out;
+
+    transform: scaleX(0);
+}
+
+.btn-cart:hover:before,
+.btn-cart:focus:before {
+    transform: scaleX(1);
+}
+.btn-cart:hover {
+    color: beige;
+}
+.log-reg {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.flag-icon {
+    position: relative;
+    display: inline-block;
+    width: 1.333333em;
+    line-height: 1em;
+}
+.flag-icon:before {
+    content: " ";
+}
+.flag-icon.flag-icon-squared {
+    width: 1em;
+}
+
+.flag-icon-id {
+    background-image: url(/images/vendor/flag-icon-css/flags/4x3/id.svg?a5fb3413ae797b940643b1c3d62a57ee);
+}
+.flag-icon-id.flag-icon-squared {
+    background-image: url(/images/vendor/flag-icon-css/flags/1x1/id.svg?b8cee6f6cd34c5dc424927a92a1ee8b2);
+}
+
+.flag-icon-us {
+    background-image: url(/images/vendor/flag-icon-css/flags/4x3/us.svg?cb3557fd707b978ef927bef888378fb8);
+}
+.flag-icon-us.flag-icon-squared {
+    background-image: url(/images/vendor/flag-icon-css/flags/1x1/us.svg?2b96179241e072f75ba926d25fe49309);
+}
