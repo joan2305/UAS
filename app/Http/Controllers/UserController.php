@@ -117,7 +117,7 @@ class UserController extends Controller
                     'originalImageName' =>$fullFileName,
                 ]);
             }
-            return redirect()->route('profileIndex')->with('success');
+            return redirect()->route('profileIndex')->with('success','test');
         }
     }
 

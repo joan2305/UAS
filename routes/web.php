@@ -33,7 +33,7 @@ Route::group(['middleware'=> 'Language'], function(){
       Route::get('/cart', [CartController::class, 'index'])->name('toCartIndex');
       Route::post('/checkout/{id}', [TransactionController::class, 'checkOut'])->name('checkoutCart');
       Route::post('/auth/logout', [UserController::class, 'logout'])->name('logout');
-      Route::get('/profile', [UserController::class, 'profileIndex'])->name('profileIndex');
+      Route::get('/profile', [HomeController::class, 'profileIndex'])->name('profileIndex');
       Route::put('/profile/{id}', [UserController::class, 'edit'])->name('updateProfile');
       Route::post('/search', [HomeController::class, 'search'])->name('searchProduct');
    });   

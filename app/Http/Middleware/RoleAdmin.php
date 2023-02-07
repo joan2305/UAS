@@ -17,9 +17,12 @@ class RoleAdmin
     public function handle(Request $request, Closure $next)
     {
         $user = $request->user();
-        if($user->role == 'Admin'){
-            return $next($request);
+        if(\Illuminate\Support\Facades\Auth::check()){
+            if($user->role == 'Admin'){
+                return $next($request);
+            }
+            
         }
-        return abort(403);
+        return redirect()->route('home');
     }
 }

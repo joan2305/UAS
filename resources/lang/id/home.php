@@ -54,6 +54,7 @@ return [
         "productName" => "Nama Produk",
         "emptyAcc" => "Tidak ada akun terdaftar...",
         "updateRoleSuc" => "Sukses mengupdate peran!",
-        "searchRes" => "Hasil Pencarian"
+        "searchRes" => "Hasil Pencarian",
+        "editProfile" => "Edit Profil"
         
 ];

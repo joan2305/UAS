@@ -6,22 +6,14 @@
     @php
         $user = Auth::user();
     @endphp
-    @if (session('success'))
-        <div class="toast-container position-fixed bottom-0 end-0 p-3">
-            <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
-                <div class="toast-header">
-                    <i class="fa-solid fa-basket-shopping"></i>
-                    <strong class="me-auto ms-2">Amazing</strong>
-                    <small>{{ __('home.justNow') }}</small>
-                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-                </div>
-                <div class="toast-body">
-                    {{ __('home.updateProfSuc') }}
-                </div>
-            </div>
-        </div>
-    @endif
+
     <div class="container">
+        @if (session('success'))
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{ __('home.updateProfSuc') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
         <h3 class="card-title text-bold text-center">{{ __('home.editProfile') }}</h3>
     </div>
     <div class="container d-flex justify-content-center mt-2" style="">

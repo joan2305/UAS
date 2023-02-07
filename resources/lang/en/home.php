@@ -53,5 +53,6 @@ return [
         "productName" => "Product Name",
         "emptyAcc" => "There is no account right now...",
         "updateRoleSuc" => "Update Role Successful!",
-        "searchRes" => "Search Result"
+        "searchRes" => "Search Result",
+        "editProfile" => "Edit Profile"
 ];
