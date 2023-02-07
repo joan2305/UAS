@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap");
+
+* {
+    font-family: "Poppins", sans-serif;
+}
+
 .product-inner-box .icons {
     right: 15px;
     display: flex;
@@ -61,7 +67,7 @@
     display: flex;
     justify-content: center;
 }
-.card-btn button {
+.card-btn a {
     position: absolute;
     background-color: #fff;
     bottom: 20px;
@@ -72,10 +78,10 @@
         opacity 0.2s ease-in-out;
 }
 
-.product-box.is-hover .card-btn button {
+.product-box.is-hover .card-btn a {
     opacity: 1;
 }
-.card-btn button:hover {
+.card-btn a:hover {
     background: #000;
     color: wheat;
 }
@@ -141,21 +147,21 @@
     color: #34495e !important;
     border-color: blanchedalmond;
 }
-.btn-cart {
-    background-color: var(--background-color);
-    color: #222;
-    font-weight: 550;
+.btn-cart a {
+    background-color: #609587;
+    color: blanchedalmond;
+    font-weight: 400;
     padding: 0.5em 1em;
-    border: 1px solid black;
+    border: 1px solid #568a79;
     outline: none;
     position: relative;
     cursor: pointer;
 
-    --background-color: #609587 !important;
-    --border-size: 2px !important;
-    --accent-color: #609587 !important;
+    --background-color: #609587;
+    --border-size: 2px;
+    --accent-color: #609587;
 }
-.btn-cart:before {
+.btn-cart a:before {
     content: "";
     position: absolute;
     left: 0;
@@ -168,17 +174,30 @@
     transform: scaleX(0);
 }
 
-.btn-cart:hover:before,
-.btn-cart:focus:before {
+.btn-cart a:hover:before,
+.btn-cart a:focus:before {
     transform: scaleX(1);
 }
-.btn-cart:hover {
-    color: beige;
+.btn-cart a:hover {
+    color: #609587;
+}
+.btn-delCart button:active {
+    border: none;
 }
 .log-reg {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+}
+.profile-form .input-text {
+    display: block;
+    width: 60%;
+    height: 36px;
+    border-width: 0 0 1.5px 0;
+    border-color: #609587;
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 400;
 }
 .flag-icon {
     position: relative;

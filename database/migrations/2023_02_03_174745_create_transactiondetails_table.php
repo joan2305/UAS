@@ -14,7 +14,6 @@ class CreateTransactiondetailsTable extends Migration
     public function up()
     {
         Schema::create('transactiondetails', function (Blueprint $table) {
-            $table->integer('price');
             $table->foreignId('transaction_id')->constrained('transactions')->onUpdate('cascade');
             $table->foreignId('product_id')->constrained('products')->onUpdate('cascade');
             $table->timestamps();

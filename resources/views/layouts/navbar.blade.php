@@ -9,9 +9,11 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             @guest
             @else
-                <form class="d-flex me-auto" role="search" style="width: 30%">
+                <form class="d-flex me-auto" role="search" method="POST" style="width: 30%"
+                    action="{{ route('searchProduct') }}">
+                    @csrf
                     <input class="form-control me-2" type="search" placeholder="{{ __('home.search') }}"
-                        aria-label="Search">
+                        aria-label="Search" name="searchInput">
                     <button class="btn btn-search" type="submit">{{ __('home.search') }}</button>
                 </form>
             @endguest
@@ -25,18 +27,20 @@
             @else
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">{{ __('home.cart') }}</a>
+                        <a class="nav-link" aria-current="page" href="{{ route('toCartIndex') }}">{{ __('home.cart') }}</a>
                     </li>
                     @if (Auth::user()->role == 'Admin')
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">{{ __('home.acc_main') }}</a>
+                            <a class="nav-link" aria-current="page"
+                                href="{{ route('toMaintenanceIndex') }}">{{ __('home.acc_main') }}</a>
                         </li>
                     @endif
                     <li class="nav-item dropdown me-2">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">{{ Auth::user()->name }}</a>
+                            aria-expanded="false">{{ Auth::user()->firstName }}</a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">{{ __('home.profile') }}</a></li>
+                            <li><a class="dropdown-item" href="{{ route('profileIndex') }}">{{ __('home.profile') }}</a>
+                            </li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
@@ -61,10 +65,10 @@
             <ul class="navbar-nav ms-auto me-auto mb-lg-0 log-reg">
                 @guest
                     <li class="nav-item">
-                        <a href="/login" class="btn btn-custom">{{ __('home.login') }}</a>
+                        <a href="{{ route('loginIndex') }}" class="btn btn-custom">{{ __('home.login') }}</a>
                     </li>
                     <li class="nav-item ms-2">
-                        <a href="/register" class="btn btn-custom">{{ __('home.register') }}</a>
+                        <a href="{{ route('registerIndex') }}" class="btn btn-custom">{{ __('home.register') }}</a>
                     </li>
                 @endguest
             </ul>

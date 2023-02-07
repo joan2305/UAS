@@ -22,6 +22,7 @@ class CreateProductsTable extends Migration
             $table->integer('originalPrice');
             $table->string('grocer');
             $table->string('image');
+            $table->boolean('isSold');
             $table->timestamps();
         });
     }

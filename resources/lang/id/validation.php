@@ -67,7 +67,7 @@ return [
         "max.array"=> "Panjang array tidak boleh lebih dari :max item.",
         "max.file"=> "Ukuran konten tidak boleh lebih besar dari :max kilobyte.",
         "max.numeric"=> "Nilai tidak boleh lebih besar dari :max.",
-        "max.string"=> "String tidak boleh lebih besar dari :max karakter.",
+        "max.string"=> "Maksimal :max karakter.",
         "max_digits"=> "Isian ini tidak boleh memiliki lebih dari :max digit.",
         "mimes"=> "Isian ini harus berisi sebuah berkas berjenis: :values.",
         "mimetypes"=> "Isian ini harus berisi sebuah berkas berjenis: :values.",

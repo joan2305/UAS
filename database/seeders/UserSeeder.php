@@ -18,21 +18,25 @@ class UserSeeder extends Seeder
         User::query()->insert([
             [
                 "id" => 1,
-                "name" => "Joan Andreas",
+                "firstName" => "Joan",
+                "lastName" => " Andreas",
                 "email" => "jadr02@gmail.com",
                 "password" => Hash::make("Uas12345"),
                 "gender" => "Female",
-                "role" => "Member",
-                "displayPicture" => ""
+                "role" => "User",
+                "displayPicture" => "fcd3f82dc7a92b6c1e27b460263c62b5.jpg",
+                "originalImageName"=> "happy.jpg"
             ],
             [
                 "id" => 2,
-                "name" => "Admin",
+                "firstName" => "Admin",
+                "lastName" => " ",
                 "email" => "admin@mail.com",
                 "password" => Hash::make("Uas12345"),
                 "gender" => "Male",
                 "role" => "Admin",
-                "displayPicture" => ""
+                "displayPicture" => "fcd3f82dc7a92b6c1e27b460263c62b5.jpg",
+                "originalImageName"=> "happy.jpg"
             ],
         ]);
     }

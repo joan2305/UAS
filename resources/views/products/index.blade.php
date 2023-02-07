@@ -3,6 +3,7 @@
 @section('title', 'Amazing | ' . $product->name)
 
 @section('content')
+
     <div class="container mt-5 d-flex">
         <div class="img-fluid col-md-5">
             <img src="{{ asset('storage/images/products/' . $product->image) }}" alt="" class="img-fluid">
@@ -37,8 +38,16 @@
                     </div>
                 </div>
             </div>
+            <div class="btn-cart">
+                <a href="{{ route('storeCart', $product->id) }}"
+                    onclick="event.preventDefault(); document.getElementById('storeCart-{{ $product->id }}').submit()"class="btn btn-cart mt-3">{{ __('home.add_to_cart') }}</a>
 
-            <a href="{{ route('storeCart', $product->id) }}" class="btn btn-cart mt-3">{{ __('home.add_to_cart') }}</a>
+                <form action="{{ route('storeCart', $product->id) }}" id="storeCart-{{ $product->id }}" class="d-none"
+                    method="POST">
+                    @csrf
+                </form>
+            </div>
+
         </div>
     </div>
 @endsection

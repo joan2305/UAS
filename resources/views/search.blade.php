@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('style')
 @endsection
-@section('title', 'Amazing | ' . __('home.home'))
+@section('title', 'Amazing | ' . __('home.searchRes'))
 @section('content')
     @guest
         <div class="container">
@@ -30,7 +30,7 @@
         @endif
         <div class="container mt-4">
             <div class="row">
-                <h2>{{ __('home.featured') }}</h2>
+                <h2>{{ __('home.searchRes') }}</h2>
             </div>
             <div class="row mt-3">
                 @foreach ($products as $product)
