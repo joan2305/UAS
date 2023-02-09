@@ -69,7 +69,7 @@
                                 <div class="d-grid gap-2 col-8">
                                     <button type="submit" class="btn btn-primary"
                                         style="background-color: #c9433a!important;">
-                                        {{ __('Login') }}
+                                        {{ __('home.login') }}
                                     </button>
                                 </div>
                             </div>

@@ -17,6 +17,7 @@
                     <div class="text-center mt-3">
                         <h5>{{ __('home.createAcc') }}</h5>
                     </div>
+
                     <div class="card-body">
                         <form method="POST" action="{{ route('register') }}"enctype="multipart/form-data">
                             @csrf
@@ -66,8 +67,6 @@
 
                             <label for="password" class="col-md-4 col-form-label">{{ __('Password') }}</label>
                             <div class="row mb-3">
-
-
                                 <div class="col-md-12">
                                     <input id="password" type="password"
                                         class="form-control @error('password') is-invalid @enderror" name="password"
@@ -127,7 +126,7 @@
                             <label for="display_picture" class="col-md-4 col-form-label">{{ __('home.dp') }}</label>
                             <div class="form-group mb-3">
                                 <input type="file" name="display_picture"
-                                    class="form-control @error('dp') is-invalid @enderror">
+                                    class="form-control @error('display_picture') is-invalid @enderror">
                                 @error('display_picture')
                                     <small class="text-danger">
                                         {{ $message }}
